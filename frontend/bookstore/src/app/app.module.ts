@@ -25,6 +25,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { ClientsService } from "./service/clients.service";
 import { BookModalComponent } from "./books/book-modal/book-modal.component";
 import { FormsModule } from "@angular/forms";
+import { ClientModalComponent } from './clients/client-modal/client-modal.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FormsModule } from "@angular/forms";
     BooksComponent,
     ClientsComponent,
     HomeComponent,
-    BookModalComponent
+    BookModalComponent,
+    ClientModalComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,6 @@ import { FormsModule } from "@angular/forms";
   ],
   providers: [BooksService, ClientsService],
   bootstrap: [AppComponent],
-  entryComponents: [BookModalComponent]
+  entryComponents: [BookModalComponent, ClientModalComponent]
 })
-export class AppModule {}
+export class AppModule { }

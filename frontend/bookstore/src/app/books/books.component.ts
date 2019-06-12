@@ -1,9 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { BooksService } from "../service/books.service";
 import { Book } from "../types";
-import { MatDialog, MAT_DIALOG_DATA } from "@angular/material";
+import { MatDialog } from "@angular/material";
 import { BookModalComponent } from "./book-modal/book-modal.component";
-import { Router } from "@angular/router";
 
 @Component({
   selector: "app-books",
@@ -17,8 +16,7 @@ export class BooksComponent implements OnInit {
   constructor(
     public dialog: MatDialog,
     private service: BooksService,
-    private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.loadData();
