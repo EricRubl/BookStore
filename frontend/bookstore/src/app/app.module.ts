@@ -25,7 +25,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { ClientsService } from "./service/clients.service";
 import { BookModalComponent } from "./books/book-modal/book-modal.component";
 import { FormsModule } from "@angular/forms";
-import { AddBookComponent } from "./books/add-book/add-book.component";
 
 @NgModule({
   declarations: [
@@ -34,8 +33,7 @@ import { AddBookComponent } from "./books/add-book/add-book.component";
     BooksComponent,
     ClientsComponent,
     HomeComponent,
-    BookModalComponent,
-    AddBookComponent
+    BookModalComponent
   ],
   imports: [
     BrowserModule,

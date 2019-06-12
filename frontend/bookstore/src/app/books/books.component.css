@@ -1,13 +1,13 @@
 .chestii {
-    width: 50%;
-    margin: 0 auto;
+  margin: 5rem auto 0 auto;
+  width: 50%;
 }
 
 table {
-    width: 100%;
+  width: 100%;
 }
 
 button {
-    width: auto;
-    margin: 1rem auto 0 auto;
+  width: auto;
+  margin: 1rem auto 0 auto;
 }
