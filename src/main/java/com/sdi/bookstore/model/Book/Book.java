@@ -1,21 +1,31 @@
 package com.sdi.bookstore.model.Book;
 
-import com.sdi.bookstore.model.Base;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.sdi.bookstore.model.Purchases.Purchase;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
+@EqualsAndHashCode
+@ToString
 @Builder
 @Setter
 @Getter
 @Table(name="Books")
-public class Book extends Base {
+public class Book{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     private String title;
+
+    @JsonBackReference
+    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    private List<Purchase> purchases = new ArrayList<>();
 }

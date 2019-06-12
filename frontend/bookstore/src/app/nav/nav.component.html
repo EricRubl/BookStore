@@ -1,8 +1,8 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="mat-elevation-z4">
   <span>
     <mat-nav-list>
       <a routerLink="/">
-        <h1>Book Store</h1>
+        <button mat-button>Book Store</button>
       </a>
     </mat-nav-list>
   </span>
@@ -10,9 +10,9 @@
   <span class="fill-middle"></span>
   
   <mat-nav-list>
-    <a routerLink="/">Home</a>
-    <a routerLink="/books">Books</a>
-    <a routerLink="/clients">Clients</a>  
+    <button mat-button routerLink="/">Home</button>
+    <button mat-button routerLink="/books">Books</button>
+    <button mat-button routerLink="/clients">Clients</button>  
   </mat-nav-list>
 </mat-toolbar>
   

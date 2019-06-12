@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class BookController{
     private Logger logger = LoggerFactory.getLogger(BookController.class);
@@ -32,6 +33,7 @@ public class BookController{
      *   -H 'Postman-Token: 804c4282-3cc2-44de-8bd6-381fe2fdd789' \
      *   -H 'cache-control: no-cache'
      */
+    @CrossOrigin
     @GetMapping(value = "/books")
     public List<Book> get() {
         return service.getBooks();
@@ -47,6 +49,7 @@ public class BookController{
      * 	"title": "grrm"
      * }'
      */
+    @CrossOrigin
     @PostMapping(value = "/books")
     public ResponseEntity add(@RequestBody BookDTO bookDTO) {
         Book book = bookConverter.DTOToModel(bookDTO);
@@ -60,6 +63,7 @@ public class BookController{
      *   -H 'Postman-Token: 22b77f74-82dd-4823-ab04-77e86d9db7cd' \
      *   -H 'cache-control: no-cache'
      */
+    @CrossOrigin
     @DeleteMapping(value = "/books/{id}")
     public ResponseEntity delete(@PathVariable Integer id) {
         try {
@@ -82,6 +86,7 @@ public class BookController{
      * 	"title": "vtbyunmj"
      * }'
      */
+    @CrossOrigin
     @PutMapping(value = "/books/{id}")
     public ResponseEntity update(@PathVariable Integer id, @RequestBody BookDTO bookDTO) {
         try {

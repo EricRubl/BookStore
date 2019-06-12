@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h1>Add book</h1>
+  <div>
+    <mat-form-field>
+      <input matInput [(ngModel)]="book.title" placeholder="Title">
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-button (click)="handleCancel()">Cancel</button>
+    <button mat-button (click)="handleSave()">Save</button>
+  </div>
+</div>
